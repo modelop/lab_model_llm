@@ -1,0 +1,70 @@
+{
+    "modelMethodology": "LLM",
+    "roi": {
+        "baselineMetricsTNR": 0.531,
+        "baselineMetricsTPR": 0.877,
+        "costMultipliersTP": 1.5,
+        "costMultipliersTN": 2,
+        "costMultipliersFP": -2,
+        "costMultipliersFN": -1.5
+    },
+   "custom": {
+      "Approvals": { 
+   "Data Usage & Approvals": {
+       "Internal": { 
+          "PHI - Unmasked": "PENDING",
+          "PHI - Masked": "PENDING",
+          "Confidential": "PENDING",
+          "Public": "PENDING"
+       },
+       "Public": "PENDING",
+       "3rd Party": "PENDING"
+    },
+    "IT Ops & InfoSec":{
+      "InfoSec Approval": "PENDING",
+      "Architecture Review": "PENDING",
+      "Ops Approval": "PENDING",
+      "SLA & Runbook": "PENDING"
+    },
+    "Legal & Reputation": {
+      "Attorney Signoff":"PENDING",
+      "Brand Compliance":"PENDING"
+    }},
+    "Governance Officer": {
+       "Governance Executive": "PENDING",
+       "Model Risk Officer": "PENDING",
+       "Model Validator": "PENDING"
+    },
+    "Long Description": "",
+    "Risk Rating": {
+       "Likelihood of Failure Rating": "PENDING",
+       "Impact Risk Rating": "PENDING",
+       "Inherent Risk Rating": "PENDING",
+       "Proposed Override": "PENDING",
+       "Override Rationale": "PENDING"
+    },
+    "Model Restrictions": [],
+    "Model Roles": {
+       "Business Functional Area Leader": "PENDING",
+       "Model BU Owner": "PENDING",
+       "Model Tech Owner": "PENDING",
+       "Lead Developer": "PENDING",
+       "Implementation Lead": "PENDING",
+       "Lead Validator": "PENDING",
+       "COE Lead": "PENDING"
+    },
+    "Model Stage": "Onboarding",
+    "Model Usage": [],
+    "modelopPackageVersion": "0.13.2",
+    "NEW_RELIC_API_KEY": "NRAK-D9JQN4NIEWCUPK3J8MNG4MB1HIX",
+    "entityGuidDeepBrew": "MzM1NTQyMXxBUE18QVBQTElDQVRJT058MTA5ODM0MzA1MA",
+    "entityGuidSynthetic": "MzM1NTQyMXxTWU5USHxNT05JVE9SfGZmN2RlYTQwLTQ0MzYtNDZlMS04NWRjLTBlOTNjYWYxZDgyZg",
+    "uses AI": true,
+    "Is Customer Facing": true,
+    "Contains PII_PHI": true,
+    "Model Owners": {
+       "Business Owner": "",
+       "IT Owner": ""
+    }
+ }
+}
