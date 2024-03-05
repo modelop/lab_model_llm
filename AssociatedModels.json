@@ -1,0 +1,13 @@
+modelsToAssociate:
+  - Name: "Langchain Implementation"
+    Model_ID: "be4b7657-3389-4c24-971d-e0fb8bd30f8d"
+    Association_Role: "MODEL_IMPLEMENTATION"
+    Association_Type: "STORED_MODEL_ASSOCIATION"
+  - Name: "LLama 2 LLM"
+    Model_ID: "0ceef944-c201-45e9-a68b-ee542fab97a9"
+    Association_Role: "MODEL_IMPLEMENTATION"
+    Association_Type: "STORED_MODEL_ASSOCIATION"
+  - Name: "Corporate Profanity Guardrails"
+    Model_ID: "8901d834-c88e-4843-b84c-f9b84e563dad"
+    Association_Role: "MODEL_IMPLEMENTATION"
+    Association_Type: "STORED_MODEL_ASSOCIATION"
