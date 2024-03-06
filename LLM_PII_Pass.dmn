@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0wb2acp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0wb2acp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.19.0">
   <decision id="Decision_0q87m1a" name="Model Test Comparator">
     <decisionTable id="decisionTable_1" hitPolicy="COLLECT">
       <input id="input_1" label="num_PII_violations" camunda:inputVariable="num_PII_violations">
@@ -10,7 +10,11 @@
       <output id="output_1" label="passes" name="passes" typeRef="boolean" />
       <output id="OutputClause_05h1co6" label="reason" name="reason" typeRef="string" />
       <output id="OutputClause_1ids7f5" name="category" typeRef="string" />
-      <output id="OutputClause_0vplf2d" name="myCustomVariable" typeRef="string" />
+      <output id="OutputClause_0vplf2d" label="action" name="action" typeRef="string" biodi:width="190">
+        <outputValues id="UnaryTests_0r63odl">
+          <text>"None","Notify","Jira","Undeploy"</text>
+        </outputValues>
+      </output>
       <rule id="DecisionRule_0aznir8">
         <inputEntry id="UnaryTests_1x4xf13">
           <text>&gt;= 1</text>
@@ -25,7 +29,7 @@
           <text>"PII_Detection"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1i5cis6">
-          <text>"customval"</text>
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
