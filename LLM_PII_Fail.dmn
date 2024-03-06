@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0wb2acp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.0">
+  <decision id="Decision_0q87m1a" name="Model Test Comparator">
+    <decisionTable id="decisionTable_1" hitPolicy="COLLECT">
+      <input id="input_1" label="num_PII_violations" camunda:inputVariable="num_PII_violations">
+        <inputExpression id="inputExpression_1" typeRef="integer" expressionLanguage="feel">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="passes" name="passes" typeRef="boolean" />
+      <output id="OutputClause_05h1co6" label="reason" name="reason" typeRef="string" />
+      <output id="OutputClause_1ids7f5" name="category" typeRef="string" />
+      <output id="OutputClause_0vplf2d" name="myCustomVariable" typeRef="string" />
+      <rule id="DecisionRule_0aznir8">
+        <inputEntry id="UnaryTests_1x4xf13">
+          <text>&gt; 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a5bp3u">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07v4w07">
+          <text>"There was one or more instances of potential PII leakage. Review the detailed results and take immediate action."</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tu87g9">
+          <text>"PII_Detection"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i5cis6">
+          <text>"customval"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_1ut5uvy">
+      <dmndi:DMNShape id="DMNShape_0dheq6y" dmnElementRef="Decision_0q87m1a">
+        <dc:Bounds height="80" width="180" x="150" y="150" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

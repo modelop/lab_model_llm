@@ -1,6 +1,5 @@
 modelsToAssociate:
-  - Name: "LLM Customer Service Policy Chatbot
-"
+  - Name: "LLM Customer Service Policy Chatbot"
     Model_ID: "2e415585-b0c8-4c97-b808-59724494b177"
     Association_Role: "MODEL_IMPLEMENTATION"
     Association_Type: "STORED_MODEL_ASSOCIATION"
