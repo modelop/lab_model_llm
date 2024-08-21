@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0wb2acp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.9.0">
+  <decision id="Decision_0q87m1a" name="Model Test Comparator">
+    <decisionTable id="decisionTable_1" hitPolicy="COLLECT">
+      <input id="InputClause_0fxnfev" label="sentiment_negative_percentage" camunda:inputVariable="sentiment_negative_percentage">
+        <inputExpression id="LiteralExpression_1k2fff2" typeRef="double">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1hy2my2" label="sentiment_positive_percentage" camunda:inputVariable="sentiment_positive_percentage">
+        <inputExpression id="LiteralExpression_0kz8aqt" typeRef="double">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_02qfz52" label="invalidFiles" camunda:inputVariable="invalidFiles">
+        <inputExpression id="LiteralExpression_0q69swg" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="passes" name="passes" typeRef="boolean" />
+      <output id="OutputClause_05h1co6" label="reason" name="reason" typeRef="string" biodi:width="336" />
+      <output id="OutputClause_1ids7f5" label="category" name="category" typeRef="string" />
+      <rule id="DecisionRule_0aznir8">
+        <inputEntry id="UnaryTests_0ljtjyo">
+          <text>&gt;0.50</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wtqp1e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l1k2v1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a5bp3u">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07v4w07">
+          <text>"Responses are greater than 50 percent negative"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tu87g9">
+          <text>"Sentiment Analysis"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1j6rt8b">
+        <inputEntry id="UnaryTests_152afd3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z8divh">
+          <text>&lt;0.50</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ti5q2i">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pcurq2">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l2iqwe">
+          <text>"Responses are less than 50 percent positive"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jkrq03">
+          <text>"Sentiment Analysis"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rkg92r">
+        <inputEntry id="UnaryTests_1myfvdx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bwzxtw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q4o95x">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1db5oho">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vs4lsk">
+          <text>"There is an invalid prompt file contained in the model"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ldrb63">
+          <text>"Prompts"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_1ut5uvy">
+      <dmndi:DMNShape id="DMNShape_0dheq6y" dmnElementRef="Decision_0q87m1a">
+        <dc:Bounds height="80" width="180" x="150" y="150" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

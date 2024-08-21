@@ -1,0 +1,12 @@
+{
+    "input_variables": [
+        "context",
+        "question"
+    ],
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "\n\tUse the following pieces of information to answer the user's question.\n\tIf you don't know the answer, just say that you don't know, don't try to make up an answer.\n\tContext: {context}\n\tQuestion: {question}\n\tOnly return the helpful answer below and nothing else.\n\tHelpful answer:\t",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+}

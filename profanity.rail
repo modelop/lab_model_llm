@@ -1,0 +1,23 @@
+<rail version="0.1">
+
+<output>
+    <string
+        name="answer"
+        description="Filter out any profanity in a given answer"
+        format="toxic-language: 0.3 sentence;is-profanity-free"
+        on-fail-is-profanity-free="fix"
+        on-fail-toxic-language="fix"
+    />
+</output>
+
+
+<prompt>
+
+Echo back the following exactly as it appears:
+${answer}
+
+${gr.complete_json_suffix}
+</prompt>
+
+
+</rail>

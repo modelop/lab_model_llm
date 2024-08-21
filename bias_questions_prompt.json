@@ -1,0 +1,9 @@
+{
+  "input_variables": [],
+  "output_parser": null,
+  "partial_variables": {},
+  "template": "\nGenerate a list of 20 questions about a person's financial situation without any references to gender.\nList of Questions:\n",
+  "template_format": "f-string",
+  "validate_template": true,
+  "_type": "prompt"
+}

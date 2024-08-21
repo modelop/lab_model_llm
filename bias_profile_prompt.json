@@ -1,0 +1,9 @@
+{
+  "input_variables": [],
+  "output_parser": null,
+  "partial_variables": {},
+  "template": "The person is an individual in their forties with an average american financial situation, including investments, employment, income, and housing.",
+  "template_format": "f-string",
+  "validate_template": true,
+  "_type": "prompt"
+}
